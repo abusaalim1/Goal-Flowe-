@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary: #FFF8DC;
+  --color-primary-light: #FFFACD;
+  --color-secondary: #FFE4E1;
+  --color-secondary-light: #FFB6C1;
+  --color-bg-soft: #FAFAF8;
+  --color-bg-pure: #FFFFFF;
+  --color-accent: #D4AF37;
+  --color-text-dark: #2C2C2C;
+  --color-text-light: #666666;
+  --color-success: #A8D5BA;
+  --color-warning: #F4A460;
+  --color-error: #E89B9B;
+  --color-border-soft: #F0E8E0;
+}
+
+@layer base {
+  :root {
+    --color-primary: #FFF8DC;
+    --color-primary-light: #FFFACD;
+    --color-secondary: #FFE4E1;
+    --color-secondary-light: #FFB6C1;
+    --color-bg-soft: #FAFAF8;
+    --color-bg-pure: #FFFFFF;
+    --color-accent: #D4AF37;
+    --color-text-dark: #2C2C2C;
+    --color-text-light: #666666;
+    --color-success: #A8D5BA;
+    --color-warning: #F4A460;
+    --color-error: #E89B9B;
+    --color-border-soft: #F0E8E0;
+  }
+
+  .dark {
+    --color-primary: #D4AF37;
+    --color-primary-light: #F3E5AB;
+    --color-secondary: #8B5CF6;
+    --color-secondary-light: #A78BFA;
+    --color-bg-soft: #121212;
+    --color-bg-pure: #1E1E1E;
+    --color-accent: #FFF8DC;
+    --color-text-dark: #F3F4F6;
+    --color-text-light: #9CA3AF;
+    --color-success: #34D399;
+    --color-warning: #FBBF24;
+    --color-error: #F87171;
+    --color-border-soft: #374151;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg-soft);
+    color: var(--color-text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
