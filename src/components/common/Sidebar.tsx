@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, Target, BarChart2, Settings, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Target, BarChart2, Settings, BookOpen, X } from 'lucide-react';
 import { cn } from './Button';
 
 interface SidebarProps {
@@ -13,6 +13,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
     { name: 'Dashboard', path: '/', icon: LayoutDashboard },
     { name: 'Goals', path: '/goals', icon: Target },
     { name: 'Analytics', path: '/analytics', icon: BarChart2 },
+    { name: 'E-Book', path: '/ebook', icon: BookOpen },
     { name: 'Settings', path: '/settings', icon: Settings },
   ];
 
