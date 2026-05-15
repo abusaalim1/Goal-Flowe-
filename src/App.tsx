@@ -6,6 +6,7 @@ import { GoalsPage } from './components/Goals/GoalsPage';
 import { GoalDetailPage } from './components/Goals/GoalDetailPage';
 import { AnalyticsPage } from './components/Analytics/AnalyticsPage';
 import { SettingsPage } from './components/Settings/SettingsPage';
+import { EbookPage } from './components/Ebook/EbookPage';
 import { useStore } from './store/useStore';
 
 export default function App() {
@@ -42,6 +43,7 @@ export default function App() {
           <Route path="goals" element={<GoalsPage />} />
           <Route path="goals/:id" element={<GoalDetailPage />} />
           <Route path="analytics" element={<AnalyticsPage />} />
+          <Route path="ebook" element={<EbookPage />} />
           <Route path="settings" element={<SettingsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>

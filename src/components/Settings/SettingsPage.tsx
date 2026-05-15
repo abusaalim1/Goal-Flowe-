@@ -3,9 +3,9 @@ import { useStore } from '../../store/useStore';
 import { Button } from '../common/Button';
 import { Card } from '../common/Card';
 import { Input } from '../common/Input';
-import { Moon, Sun, Download, Upload, Trash2, Shield, Bell, Cpu, Palette, User, Camera } from 'lucide-react';
+import { Moon, Sun, Download, Upload, Trash2, Shield, Bell, Cpu, Palette, User, Camera, BookOpen } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { exportData } from '../../services/exportService';
+import { downloadEbook, exportData } from '../../services/exportService';
 
 export const SettingsPage: React.FC = () => {
   const { settings, updateSettings, goals, activities } = useStore();
@@ -16,6 +16,10 @@ export const SettingsPage: React.FC = () => {
 
   const handleExport = () => {
     exportData({ goals, activities, settings }, 'json');
+  };
+
+  const handleEbookExport = () => {
+    downloadEbook(goals, settings);
   };
 
   const handleImport = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -213,6 +217,16 @@ export const SettingsPage: React.FC = () => {
                 </div>
                 <Button variant="secondary" size="sm" onClick={handleExport} className="gap-2">
                   <Download className="h-4 w-4" /> Export
+                </Button>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="flex flex-col gap-1">
+                  <span className="font-medium text-[var(--color-text-dark)]">Export E-Book</span>
+                  <span className="text-sm text-[var(--color-text-light)]">Download a polished goal story</span>
+                </div>
+                <Button variant="secondary" size="sm" onClick={handleEbookExport} className="gap-2">
+                  <BookOpen className="h-4 w-4" /> E-Book
                 </Button>
               </div>
 
